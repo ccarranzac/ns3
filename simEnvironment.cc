@@ -220,8 +220,8 @@ int main (int argc, char *argv[]){
 //Configuración red inalambrica
 
   WifiHelper wifi;
-
-  YansWifiPhyHelper wifiPhy =  YansWifiPhyHelper::Default ();
+  YansWifiPhyHelper wifiPhy;
+  //YansWifiPhyHelper wifiPhy =  YansWifiPhyHelper::Default ();
   
   wifiPhy.Set ("RxGain", DoubleValue (-10) );
   
@@ -235,7 +235,7 @@ int main (int argc, char *argv[]){
 //Protocolo de red 80211b
 
   WifiMacHelper wifiMac;
-  wifi.SetStandard (WIFI_PHY_STANDARD_80211b);
+  wifi.SetStandard (WIFI_STANDARD_80211b);
   wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager",
                                 "DataMode",StringValue (phyMode),
                                 "ControlMode",StringValue (phyMode));
