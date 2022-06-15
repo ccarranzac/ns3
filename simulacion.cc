@@ -214,7 +214,7 @@ int main (int argc, char *argv[]){
   WifiHelper wifi;
   YansWifiPhyHelper wifiPhy; 
   wifiPhy.Set ("RxGain", DoubleValue (-10) );
-  wifiPhy.SetPcapDataLinkType (WifiPhyHelper::DLT_IEEE802_11_RADIO)
+  wifiPhy.SetPcapDataLinkType (WifiPhyHelper::DLT_IEEE802_11_RADIO);
   YansWifiChannelHelper wifiChannel;
   wifiChannel.SetPropagationDelay ("ns3::ConstantSpeedPropagationDelayModel");
   wifiChannel.AddPropagationLoss ("ns3::FriisPropagationLossModel");
