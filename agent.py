@@ -40,17 +40,12 @@ try:
         print("Start iteration: ", currIt)
         obs = env.reset()
         print("Step: ", stepIdx)
-        print("---obs:", obs)
-
         while True:
             stepIdx += 1
             action = env.action_space.sample()
-            print("---action: ", action)
-
             print("Step: ", stepIdx)
             obs, reward, done, info = env.step(action)
-            print("---obs, reward, done, info: ", obs, reward, done, info)
-
+            print("obs, reward, done, info: ", obs, reward, done, info)
             if done:
                 stepIdx = 0
                 if currIt + 1 < iterationNum:
