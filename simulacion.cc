@@ -177,7 +177,7 @@ int main (int argc, char *argv[]){
   double simulationTime = 20.0; // en segundos
   double startTraffic = 10.0; 
   double step = 1.0;
-  uint32_t port = 5555;
+  uint32_t port = 8080;
 
   NS_LOG_UNCOND ("==============Simulation ===============================");
 

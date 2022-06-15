@@ -16,7 +16,7 @@ args = parser.parse_args()
 startSim = bool(args.start)
 iterationNum = int(args.iterations)
 
-port = 5555
+port = 8080
 simTime = 20 # seconds
 stepTime = 0.5  # seconds
 seed = 0
@@ -43,9 +43,14 @@ try:
         while True:
             stepIdx += 1
             action = env.action_space.sample()
-            print("Step: ", stepIdx)
+            print("=================================")
+            print("STEP: ", stepIdx)
             obs, reward, done, info = env.step(action)
-            print("obs, reward, done, info: ", obs, reward, done, info)
+            print("obs: ", obs)
+            print("reward: ",reward)
+            print("done: ", done)
+            print("info: ", info)
+            print("=================================")
             if done:
                 stepIdx = 0
                 if currIt + 1 < iterationNum:
