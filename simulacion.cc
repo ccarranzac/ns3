@@ -296,5 +296,6 @@ int main (int argc, char *argv[]){
   Simulator::Run ();
   openGym->NotifySimulationEnd();
   Simulator::Destroy ();
+  NS_LOG_UNCOND ("==============End Simulation ===============================");
   return 0;
 }
