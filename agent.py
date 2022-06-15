@@ -1,7 +1,7 @@
 import argparse
 from ns3gym import ns3env
 
-
+#Add argument to de execution
 parser = argparse.ArgumentParser(description='Start simulation script on/off')
 parser.add_argument('--start',
                     type=int,
@@ -25,8 +25,6 @@ simArgs = {"--simTime": simTime,
 debug = False
 
 env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug)
-# simpler:
-#env = ns3env.Ns3Env()
 env.reset()
 
 ob_space = env.observation_space
