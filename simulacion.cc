@@ -18,10 +18,10 @@
 using namespace ns3;
 
 //Params
-double distance = 30;
-uint32_t nodesNum = 15;  
+double distance = 40;
+uint32_t nodesNum = 20;  
 uint32_t packetDim = 1000; 
-uint32_t packetNum = 100;
+uint32_t packetNum = 200;
 uint32_t receivedPackets = 0;
 
 NodeContainer nodes;
